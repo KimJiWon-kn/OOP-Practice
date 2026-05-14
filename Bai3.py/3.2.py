@@ -106,54 +106,9 @@ class ColorPoint(Point):
 # LỚP TEST
 # =========================
 
-class C002454:
-
-    # Kịch bản 1
-    @staticmethod
-    def testCase1():
-
-        A = ColorPoint(5, 10, "trắng")
-
-        A.print()
-
-    # Kịch bản 2
-    @staticmethod
-    def testCase2():
-
-        B = ColorPoint()
-
-        B.read()
-
-        B.move(10, 8)
-
-        B.print()
-
-    # Kịch bản 3
-    @staticmethod
-    def testCase3():
-
-        C = ColorPoint(6, 3, "đen")
-
-        D = ColorPoint.copy(C)
-
-        D.print()
-
-        D.setColor("vàng")
-
-        D.print()
-
-        C.print()
-
-    # Main
-    @staticmethod
-    def main():
-
-        C002454.testCase1()
-
-        C002454.testCase2()
-
-        C002454.testCase3()
-
-
-# Chạy chương trình
-C002454.main()
+class  ColorPointTest:
+    def testCase(self):
+        c1 = ColorPoint()  # color='xanh'; c1.print()
+        c2 = ColorPoint(); c2.read()  # '<x> <y> <color>'; c2.print()
+        c3 = ColorPoint(c2)  # copy
+        c2.move(5,5); c2.print(); c3.print()  # c3 giữ nguyên
